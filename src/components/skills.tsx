@@ -175,10 +175,10 @@ export default function Skills() {
                                     <HoverBorderGradient
                                         containerClassName="rounded-full"
                                         as="button"
-                                        className="bg-black text-white flex items-center space-x-2"
+                                        className="bg-black text-white flex items-center space-x-1 md:space-x-2"
                                     >
                                         <Image src={tech.image} width={32} height={32} alt={tech.name} className={tech?.className ?? ''} />
-                                        <span>{tech.name}</span>
+                                        <span className="text-xs md:text-sm">{tech.name}</span>
                                     </HoverBorderGradient>
                                 </div>
                             ))}
