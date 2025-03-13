@@ -13,8 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "My Portfolio",
+  title: "Hồ Văn Dễ",
+  description: "My name is Hồ Văn Dễ and i'm a web developer",
+  openGraph: {
+    type: "website",
+    locale: "vi_VN",
+    url: "https://hovande.id.vn",
+    title: "Hồ Văn Dễ",
+    description: "My name is Hồ Văn Dễ and i'm a web developer",
+    images: [
+      {
+        url: "/vercel.svg",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio",
+      },
+    ],
+    siteName: "Hồ Văn Dễ Portfolio",
+  },
 };
 
 export default function RootLayout({
