@@ -12,15 +12,7 @@ import Image from "next/image"
 import BlurText from "@/blocks/TextAnimations/BlurText/BlurText"
 
 const projects = [
-    {
-        title: "Shopping Online",
-        description:
-            "Full featured online shopping with product management, shopping cart, payment processing, store opening and admin panel.",
-        image: "/placeholder.png",
-        tags: ["HTML", "CSS", "Javascript", "PHP", "MySQL"],
-        github: "https://github.com",
-        demo: "https://example.com",
-    },
+
     {
         title: "Smart Tech Store",
         description: "A retail website for electronic devices, supporting search, reviews, ordering, and online payment.",
@@ -36,6 +28,15 @@ const projects = [
         tags: ["Typescript", "Nextjs", "ReactPlayer", "Tailwind CSS", "Zustand", "Nestjs", "MongoDB", "Redis"],
         github: "https://github.com/hode2002/youtube-clone",
         demo: "https://youtu.be/lf3AO2-CQnQ",
+    },
+    {
+        title: "Shopping Online",
+        description:
+            "Full featured online shopping with product management, shopping cart, payment processing, store opening and admin panel.",
+        image: "/placeholder.png",
+        tags: ["HTML", "CSS", "Javascript", "PHP", "MySQL"],
+        github: "https://github.com/hode2002/Shopping-MVC",
+        demo: "",
     },
 ]
 
@@ -99,7 +100,7 @@ export default function Projects() {
                                                 </Badge>
                                             ))}
                                         </div>
-                                        {index === 0 && (
+                                        {index === 2 && (
                                             <div className="mt-4">
                                                 <p className="text-sm text-zinc-400 mb-2">Collaborators:</p>
                                                 <div className="flex text-zinc-400">
@@ -115,12 +116,12 @@ export default function Projects() {
                                                 Code
                                             </LinkPreview>
                                         </Button>
-                                        <Button size="sm" className="gap-1" asChild>
+                                        {project.demo && <Button size="sm" className="gap-1" asChild>
                                             <LinkPreview url={project.demo} _target="_blank">
                                                 <ExternalLink className="h-4 w-4" />
                                                 Live Demo
                                             </LinkPreview>
-                                        </Button>
+                                        </Button>}
                                     </CardFooter>
                                 </Card>
                             </BackgroundGradient>
