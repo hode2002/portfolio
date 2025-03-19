@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Hồ Văn Dễ",
   description: "My name is Hồ Văn Dễ and i'm a web developer",
+  icons: {
+    icon: "/favicon.webp",
+  },
   openGraph: {
     type: "website",
     locale: "vi_VN",
@@ -23,7 +26,7 @@ export const metadata: Metadata = {
     description: "My name is Hồ Văn Dễ and i'm a web developer",
     images: [
       {
-        url: "/vercel.svg",
+        url: "/favicon.webp",
         width: 1200,
         height: 630,
         alt: "Portfolio",
