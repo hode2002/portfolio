@@ -12,14 +12,13 @@ import Image from "next/image"
 import BlurText from "@/blocks/TextAnimations/BlurText/BlurText"
 
 const projects = [
-
     {
         title: "Smart Tech Store",
         description: "A retail website for electronic devices, supporting search, reviews, ordering, and online payment.",
         image: "/images/smart-tech-store.gif",
         tags: ["Typescript", "Nextjs", "Shadcn", "Tailwind CSS", "Redux", "Nestjs", "MySQL", "MongoDB", "Redis"],
         github: "https://github.com/hode2002/smart-tech-store",
-        demo: "https://smart-tech-store.vercel.app",
+        demo: "https://store.hovande.id.vn",
     },
     {
         title: "Youtube Clone",
