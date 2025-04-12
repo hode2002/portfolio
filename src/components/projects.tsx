@@ -10,12 +10,13 @@ import { ScrollReveal, StaggerItem } from "./ui/scroll-reveal"
 import { LinkPreview } from "@/components/ui/link-preview"
 import Image from "next/image"
 import BlurText from "@/blocks/TextAnimations/BlurText/BlurText"
+import Aurora from "@/blocks/Backgrounds/Aurora/Aurora"
 
 const projects = [
     {
         title: "Smart Tech Store",
         description: "A retail website for electronic devices, supporting search, reviews, ordering, and online payment.",
-        image: "/images/smart-tech-store.gif",
+        image: "/images/smart-tech-store.png",
         tags: ["Typescript", "Nextjs", "Shadcn", "Tailwind CSS", "Redux", "Nestjs", "MySQL", "MongoDB", "Redis"],
         github: "https://github.com/hode2002/smart-tech-store",
         demo: "https://store.hovande.id.vn",
@@ -57,6 +58,12 @@ const people = [
 export default function Projects() {
     return (
         <section id="projects" className="pt-24 pb-48 bg-zinc-950">
+            <Aurora
+                colorStops={["#00D8FF", "#7CFF67", "#00D8FF"]}
+                blend={0.5}
+                amplitude={1.0}
+                speed={1.5}
+            />
             <div className="container mx-auto px-4 md:px-6">
                 <ScrollReveal variant="slideUp">
                     <div className="flex justify-center items-center">
@@ -80,6 +87,7 @@ export default function Projects() {
                                 <Card className="rounded-[20px] border-0 bg-zinc-900 h-full">
                                     <CardHeader className="p-0">
                                         <div className="overflow-hidden rounded-t-[20px] relative h-48">
+
                                             <Image
                                                 src={project.image || "/placeholder.png"}
                                                 alt={project.title}

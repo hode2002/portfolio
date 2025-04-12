@@ -14,7 +14,7 @@ const skills = [
     },
     {
         title: "Frontend",
-        description: "TypeScript, ReactJS, NextJS, Tailwind CSS",
+        description: "ReactJS, NextJS, Tailwind CSS, Shadcn UI, Redux Toolkit, Zustand",
         icon: "💻",
     },
     {
@@ -29,7 +29,7 @@ const skills = [
     },
     {
         title: "DevOps",
-        description: "Docker, Render, Vercel",
+        description: "Docker, Render, Vercel, AWS EC2, Cloudflare, Nginx",
         icon: "🚀",
     },
     {

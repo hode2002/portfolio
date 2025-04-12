@@ -2,36 +2,28 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { TracingBeam } from "./ui/tracing-beam"
-import { TextGenerateEffect } from "./ui/text-generate-effect"
 import { ScrollReveal } from "./ui/scroll-reveal"
 import Image from "next/image"
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient"
-import TextPressure from "@/blocks/TextAnimations/TextPressure/TextPressure"
+import BlurText from "@/blocks/TextAnimations/BlurText/BlurText"
+import TrueFocus from "@/blocks/TextAnimations/TrueFocus/TrueFocus"
 
 export default function About() {
-    const aboutText = `As a recent graduate, I am looking forward to working in a professional environment where I can apply 
-    the knowledge I have gained in school. I specialize in React, Next.js, Node.js, Nest.js and modern web technologies.
-    I am always eager to learn and improve my programming skills to write clean, maintainable code.`
+    const aboutText = `I want to start as a Backend Developer Intern, learning to build and improve systems. I also want to explore Cloud Computing and DevOps to understand how to deploy and manage applications. In the next 3-5 years, my goal is to become a Fullstack Developer, skilled in both backend and frontend, to build modern and efficient web applications.`
 
     return (
         <section id="about" className="py-24 bg-zinc-950">
             <TracingBeam className="px-6">
                 <div className="container mx-auto max-w-4xl">
-                    <ScrollReveal variant="slideUp">
-                        <div className="relative">
-                            <TextPressure
-                                text="About Me"
-                                flex={true}
-                                alpha={false}
-                                stroke={false}
-                                width={true}
-                                weight={true}
-                                italic={true}
-                                textColor="#ffffff"
-                                strokeColor="#ff0000"
-                                className="text-3xl md:text-4xl font-bold text-center mb-12 text-white"
-                            />
-                        </div>
+                    <ScrollReveal variant="slideUp" className="text-center text-white mb-12">
+                        <TrueFocus
+                            sentence="About Me"
+                            manualMode={false}
+                            blurAmount={5}
+                            borderColor="#00D9FF"
+                            animationDuration={2}
+                            pauseBetweenAnimations={0.5}
+                        />
                     </ScrollReveal>
                     <ScrollReveal variant="fadeIn" delay={0.2}>
                         <Card className="border-none bg-zinc-900/50 backdrop-blur-sm">
@@ -50,8 +42,14 @@ export default function About() {
                                         </div>
                                     </ScrollReveal>
                                     <ScrollReveal variant="slideLeft" delay={0.4}>
+                                        <BlurText
+                                            text={aboutText}
+                                            delay={50}
+                                            animateBy="words"
+                                            direction="bottom"
+                                            className="text-xl text-white"
+                                        />
                                         <div>
-                                            <TextGenerateEffect words={aboutText} className="text-zinc-300" />
                                             <div className="mt-6 flex flex-wrap gap-3">
                                                 <HoverBorderGradient
                                                     containerClassName="rounded-full"
