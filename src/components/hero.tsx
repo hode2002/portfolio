@@ -10,6 +10,8 @@ import { FloatingNav } from "@/components/ui/floating-nav"
 import Image from "next/image";
 import { SparklesCore } from "@/components/ui/sparkles"
 import { LinkPreview } from "@/components/ui/link-preview"
+import SpotlightCard from "@/blocks/Components/SpotlightCard/SpotlightCard"
+import { BackgroundGradient } from "@/components/ui/background-gradient"
 
 const navItems = [
     {
@@ -87,6 +89,21 @@ export default function Hero() {
                         >
                             <Github className="h-5 w-5" />
                             <span className="sr-only">GitHub</span>
+                        </LinkPreview>
+
+                        <LinkPreview
+                            url="/cv.pdf"
+                            imageSrc="/images/cv.png"
+                            isStatic
+                            className="text-white rounded-full p-2 border border-white/20 hover:bg-white/10 transition-colors"
+                        >
+                            <Image
+                                width={200}
+                                height={200}
+                                src="/icons/file-user.png"
+                                alt="cv"
+                                className="text-white rounded-full w-5 h-5" />
+                            <span className="sr-only">CV</span>
                         </LinkPreview>
                         <LinkPreview
                             url="https://www.facebook.com/hvd.070602"
