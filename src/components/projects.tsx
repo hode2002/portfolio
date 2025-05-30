@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Github, ExternalLink } from "lucide-react"
 import { BackgroundGradient } from "./ui/background-gradient"
-import { AnimatedTooltip } from "./ui/animated-tooltip"
 import { ScrollReveal, StaggerItem } from "./ui/scroll-reveal"
 import { LinkPreview } from "@/components/ui/link-preview"
 import Image from "next/image"
@@ -30,32 +29,18 @@ const projects = [
         demo: "https://youtu.be/lf3AO2-CQnQ",
     },
     {
-        title: "Shopping Online",
+        title: "Image Enhancer",
         description:
-            "Full featured online shopping with product management, shopping cart, payment processing, store opening and admin panel.",
-        image: "/placeholder.png",
-        tags: ["HTML", "CSS", "Javascript", "PHP", "MySQL"],
-        github: "https://github.com/hode2002/Shopping-MVC",
-        demo: "",
-    },
-]
-
-const people = [
-    {
-        id: 1,
-        name: "Lam Thanh Vy",
-        designation: "Developer",
-        image: "/images/collaborator-1.png",
-    },
-    {
-        id: 2,
-        name: "Nguyen Thanh Loi",
-        designation: "Developer",
-        image: "/images/collaborator-2.png",
+            "A powerful image enhancement app that allows users to enhance, transform, and optimize their images with AI-powered features.",
+        image: "/image-enhancer.png",
+        tags: ["Typescript", "Nextjs", "Clerk", "Shadcn", "Tailwind CSS", "Nestjs", "Prisma", "PostgreSQL", "HuggingFace", "supabase", "Cloudinary"],
+        github: "https://github.com/hode2002/image-enhancer-frontend",
+        demo: "https://image.hovande.id.vn",
     },
 ]
 
 export default function Projects() {
+
     return (
         <section id="projects" className="pt-24 pb-48 bg-zinc-950">
             <Aurora
@@ -87,13 +72,12 @@ export default function Projects() {
                                 <Card className="rounded-[20px] border-0 bg-zinc-900 h-full">
                                     <CardHeader className="p-0">
                                         <div className="overflow-hidden rounded-t-[20px] relative h-48">
-
                                             <Image
                                                 src={project.image || "/placeholder.png"}
                                                 alt={project.title}
                                                 fill
                                                 quality={100}
-                                                className="object-cover transition-transform hover:scale-105 duration-500"
+                                                className="object-contain transition-transform hover:scale-105 duration-500"
                                             />
                                         </div>
                                     </CardHeader>
@@ -107,14 +91,6 @@ export default function Projects() {
                                                 </Badge>
                                             ))}
                                         </div>
-                                        {index === 2 && (
-                                            <div className="mt-4">
-                                                <p className="text-sm text-zinc-400 mb-2">Collaborators:</p>
-                                                <div className="flex text-zinc-400">
-                                                    <AnimatedTooltip items={people} />
-                                                </div>
-                                            </div>
-                                        )}
                                     </CardContent>
                                     <CardFooter className="p-6 pt-0 flex gap-2">
                                         <Button variant="outline" size="sm" className="gap-1" asChild>
