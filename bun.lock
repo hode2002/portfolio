@@ -52,6 +52,7 @@
         "next-themes": "^0.4.4",
         "ogl": "^1.0.11",
         "qss": "^3.0.0",
+        "random": "^5.4.0",
         "react": "^19.0.0",
         "react-day-picker": "^8.10.1",
         "react-dom": "^19.0.0",
@@ -1031,6 +1032,8 @@
     "qss": ["qss@3.0.0", "", {}, "sha512-ZHoCB3M/3Voev64zhLLUOKDtaEdJ/lymsJJ7R3KBusVZ2ovNiIB7XOq3Xh6V1a8O+Vho+g2B5YElq9zW7D8aQw=="],
 
     "queue-microtask": ["queue-microtask@1.2.3", "", {}, "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="],
+
+    "random": ["random@5.4.0", "", {}, "sha512-Y147ufdzRqcQuBpKkoW7N3+B/SW4X6pF3ZfsNy+bF1r3i/I+j2zobnCp+9vN1nIJDjObI/174PCySTa3FECynQ=="],
 
     "react": ["react@19.0.0", "", {}, "sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ=="],
 

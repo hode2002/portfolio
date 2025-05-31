@@ -57,6 +57,7 @@
     "next-themes": "^0.4.4",
     "ogl": "^1.0.11",
     "qss": "^3.0.0",
+    "random": "^5.4.0",
     "react": "^19.0.0",
     "react-day-picker": "^8.10.1",
     "react-dom": "^19.0.0",
