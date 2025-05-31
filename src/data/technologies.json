@@ -127,6 +127,11 @@
         {
             "name": "NPM",
             "image": "/technologies/npm.png"
+        },
+        {
+            "name": "Stripe",
+            "image": "/technologies/stripe.png",
+            "className": "bg-white rounded-full p-1"
         }
     ]
 } 
