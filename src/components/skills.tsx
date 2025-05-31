@@ -5,138 +5,22 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient"
 import Image from "next/image"
 import ColourfulText from "@/components/ui/colourful-text"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
+import { useEffect, useState } from "react"
+import skillsData from "@/data/skills.json"
+import technologiesData from "@/data/technologies.json"
+import random from "random"
 
-const skills = [
-    {
-        title: "Programming Language",
-        description: "TypeScript, PHP, Python",
-        icon: "🧑‍💻",
-    },
-    {
-        title: "Frontend",
-        description: "ReactJS, NextJS, Tailwind CSS, Shadcn UI, Redux Toolkit, Zustand",
-        icon: "💻",
-    },
-    {
-        title: "Backend",
-        description: "NodeJS, Express, NestJS, Prisma, REST API",
-        icon: "⚙️",
-    },
-    {
-        title: "Databases",
-        description: "MySQL, MongoDB, Redis",
-        icon: "🛢️",
-    },
-    {
-        title: "DevOps",
-        description: "Docker, Render, Vercel, AWS EC2, Cloudflare, Nginx",
-        icon: "🚀",
-    },
-    {
-        title: "Tools",
-        description: "Git, GitHub, VS Code, Postman, Insomnia",
-        icon: "🔧",
-    },
-]
-
-const technologies = [
-    {
-        name: "Typescript",
-        image: "/technologies/typescript.svg",
-    },
-    {
-        name: "ReactJS",
-        image: "/technologies/react.png",
-    },
-    {
-        name: "NextJS",
-        image: "/technologies/nextjs.svg",
-    },
-    {
-        name: "NodeJS",
-        image: "/technologies/nodejs.png",
-    },
-    {
-        name: "NestJS",
-        image: "/technologies/nestjs.svg",
-    },
-    {
-        name: "JWT",
-        image: "/technologies/json-web-token.svg",
-    },
-    {
-        name: "MySQL",
-        image: "/technologies/mysql.svg",
-    },
-    {
-        name: "MongoDB",
-        image: "/technologies/mongodb.svg",
-    },
-    {
-        name: "Redis",
-        image: "/technologies/redis.svg",
-    },
-    {
-        name: "Tailwind CSS",
-        image: "/technologies/tailwind-css.svg",
-    },
-    {
-        name: "Shadcn UI",
-        image: "/technologies/shadcn-ui.png",
-    },
-    {
-        name: "Redux Toolkit",
-        image: "/technologies/redux.svg",
-    },
-    {
-        name: "Zustand",
-        image: "/technologies/zustand.svg",
-    },
-    {
-        name: "React Query",
-        image: "/technologies/react-query.png",
-    },
-    {
-        name: "ExpressJS",
-        image: "/technologies/express.svg",
-        className: "bg-white rounded-full p-1",
-    },
-    {
-        name: "Prisma",
-        image: "/technologies/prisma-orm.svg",
-        className: "bg-white rounded-full p-1",
-    },
-    {
-        name: "Docker",
-        image: "/technologies/docker.svg",
-    },
-    {
-        name: "Vercel",
-        image: "/technologies/vercel.png",
-    },
-    {
-        name: "Render",
-        image: "/technologies/render.png",
-    },
-    {
-        name: "Postman",
-        image: "/technologies/postman.png",
-    },
-    {
-        name: "Git",
-        image: "/technologies/git.svg",
-    },
-    {
-        name: "GitHub",
-        image: "/technologies/github.png",
-    },
-    {
-        name: "NPM",
-        image: "/technologies/npm.png",
-    },
-]
+const { skills } = skillsData;
+const { technologies } = technologiesData;
 
 export default function Skills() {
+    const [shuffledTechs, setShuffledTechs] = useState(technologies);
+
+    useEffect(() => {
+        const shuffledTechsArray = random.shuffler(technologies)
+        setShuffledTechs(shuffledTechsArray());
+    }, []);
+
     return (
         <section id="skills" className="py-24 bg-black">
             <div className="container mx-auto px-4 md:px-6">
@@ -149,7 +33,7 @@ export default function Skills() {
                 <ScrollReveal variant="stagger" className="mb-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {skills.map((skill, idx) => (
-                            <StaggerItem key={idx}>
+                            <StaggerItem key={idx} delay={idx * 0.1}>
                                 <BackgroundGradient containerClassName="p-[1px]">
                                     <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(0, 229, 255, 0.2)">
                                         <div className="flex items-center gap-2">
@@ -170,15 +54,15 @@ export default function Skills() {
                     </h3>
                     <div className="rounded-md overflow-hidden">
                         <div className="mt-6 grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-3">
-                            {technologies.map((tech, idx) => (
-                                <div className="flex justify-center text-center" key={idx}>
+                            {shuffledTechs.map((tech, idx) => (
+                                <div key={idx} className="flex justify-center text-center">
                                     <HoverBorderGradient
                                         containerClassName="rounded-full"
                                         as="button"
                                         className="bg-black text-white flex items-center space-x-1 md:space-x-2"
                                     >
                                         <Image src={tech.image} width={32} height={32} alt={tech.name} className={tech?.className ?? ''} />
-                                        <span className="text-xs md:text-sm">{tech.name}</span>
+                                        <span className="text-xs md:text-sm text-nowrap">{tech.name}</span>
                                     </HoverBorderGradient>
                                 </div>
                             ))}

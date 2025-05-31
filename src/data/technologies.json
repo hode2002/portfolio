@@ -1,0 +1,132 @@
+{
+    "technologies": [
+        {
+            "name": "Typescript",
+            "image": "/technologies/typescript.svg"
+        },
+        {
+            "name": "ReactJS",
+            "image": "/technologies/react.png"
+        },
+        {
+            "name": "NextJS",
+            "image": "/technologies/nextjs.svg"
+        },
+        {
+            "name": "Clerk",
+            "image": "/technologies/clerk.png",
+            "className": "bg-white rounded-full p-1"
+        },
+        {
+            "name": "NodeJS",
+            "image": "/technologies/nodejs.png"
+        },
+        {
+            "name": "NestJS",
+            "image": "/technologies/nestjs.svg"
+        },
+        {
+            "name": "Supabase",
+            "image": "/technologies/supabase.png",
+            "className": "bg-white rounded-full p-1"
+        },
+        {
+            "name": "Nginx",
+            "image": "/technologies/nginx.svg"
+        },
+        {
+            "name": "AWS EC2",
+            "image": "/technologies/aws.png",
+            "className": "bg-white rounded-full p-1"
+        },
+        {
+            "name": "SocketIO",
+            "image": "/technologies/socket-io.png",
+            "className": "bg-white rounded-full p-1"
+        },
+        {
+            "name": "Cloudinary",
+            "image": "/technologies/cloudinary.webp",
+            "className": "bg-white rounded-full p-1"
+        },
+        {
+            "name": "Cloudflare",
+            "image": "/technologies/cloudflare.png",
+            "className": "bg-white rounded-full p-1"
+        },
+        {
+            "name": "JWT",
+            "image": "/technologies/json-web-token.svg"
+        },
+        {
+            "name": "MySQL",
+            "image": "/technologies/mysql.svg"
+        },
+        {
+            "name": "MongoDB",
+            "image": "/technologies/mongodb.svg"
+        },
+        {
+            "name": "Redis",
+            "image": "/technologies/redis.svg"
+        },
+        {
+            "name": "Tailwind CSS",
+            "image": "/technologies/tailwind-css.svg"
+        },
+        {
+            "name": "Shadcn UI",
+            "image": "/technologies/shadcn-ui.png"
+        },
+        {
+            "name": "Redux Toolkit",
+            "image": "/technologies/redux.svg"
+        },
+        {
+            "name": "Zustand",
+            "image": "/technologies/zustand.svg"
+        },
+        {
+            "name": "React Query",
+            "image": "/technologies/react-query.png"
+        },
+        {
+            "name": "ExpressJS",
+            "image": "/technologies/express.svg",
+            "className": "bg-white rounded-full p-1"
+        },
+        {
+            "name": "Prisma",
+            "image": "/technologies/prisma-orm.svg",
+            "className": "bg-white rounded-full p-1"
+        },
+        {
+            "name": "Docker",
+            "image": "/technologies/docker.svg"
+        },
+        {
+            "name": "Vercel",
+            "image": "/technologies/vercel.png"
+        },
+        {
+            "name": "Render",
+            "image": "/technologies/render.png"
+        },
+        {
+            "name": "Postman",
+            "image": "/technologies/postman.png"
+        },
+        {
+            "name": "Git",
+            "image": "/technologies/git.svg"
+        },
+        {
+            "name": "GitHub",
+            "image": "/technologies/github.png"
+        },
+        {
+            "name": "NPM",
+            "image": "/technologies/npm.png"
+        }
+    ]
+} 

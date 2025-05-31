@@ -1,0 +1,34 @@
+{
+    "skills": [
+        {
+            "title": "Programming Language",
+            "description": "TypeScript, PHP, Python",
+            "icon": "🧑‍💻"
+        },
+        {
+            "title": "Frontend",
+            "description": "ReactJS, NextJS, Tailwind CSS, Shadcn UI, Redux Toolkit, Zustand",
+            "icon": "💻"
+        },
+        {
+            "title": "Backend",
+            "description": "NodeJS, Express, NestJS, Prisma, REST API",
+            "icon": "⚙️"
+        },
+        {
+            "title": "Databases",
+            "description": "MySQL, MongoDB, Redis",
+            "icon": "🛢️"
+        },
+        {
+            "title": "DevOps",
+            "description": "Docker, Render, Vercel, AWS EC2, Cloudflare, Nginx",
+            "icon": "🚀"
+        },
+        {
+            "title": "Tools",
+            "description": "Git, GitHub, VS Code, Postman, Insomnia",
+            "icon": "🔧"
+        }
+    ]
+} 
