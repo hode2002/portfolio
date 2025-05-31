@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hovande.id.vn/sitemap.xml
+
+Disallow: /_next/
+Disallow: /static/ 
