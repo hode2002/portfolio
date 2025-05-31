@@ -32,15 +32,61 @@ const projects = [
         title: "Image Enhancer",
         description:
             "A powerful image enhancement app that allows users to enhance, transform, and optimize their images with AI-powered features.",
-        image: "/image-enhancer.png",
+        image: "/images/image-enhancer.png",
         tags: ["Typescript", "Nextjs", "Clerk", "Shadcn", "Tailwind CSS", "Nestjs", "Prisma", "PostgreSQL", "HuggingFace", "supabase", "Cloudinary"],
         github: "https://github.com/hode2002/image-enhancer-frontend",
         demo: "https://image.hovande.id.vn",
     },
 ]
 
-export default function Projects() {
+function ProjectCard({ project }: { project: typeof projects[0] }) {
+    return (
+        <StaggerItem>
+            <BackgroundGradient className="rounded-[22px] p-0.5 bg-zinc-900">
+                <Card className="rounded-[20px] border-0 bg-zinc-900 h-full">
+                    <CardHeader className="p-0">
+                        <div className="overflow-hidden rounded-t-[20px] relative h-48">
+                            <Image
+                                src={project.image || "/placeholder.png"}
+                                alt={project.title}
+                                fill
+                                quality={100}
+                                className="bg-sidebar-accent object-contain transition-transform hover:scale-105 duration-500"
+                            />
+                        </div>
+                    </CardHeader>
+                    <CardContent className="p-6">
+                        <CardTitle className="text-xl mb-2 text-white">{project.title}</CardTitle>
+                        <CardDescription className="text-zinc-400 mb-4">{project.description}</CardDescription>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                            {project.tags.map((tag, i) => (
+                                <Badge key={i} variant="secondary" className="bg-zinc-800 text-zinc-300">
+                                    {tag}
+                                </Badge>
+                            ))}
+                        </div>
+                    </CardContent>
+                    <CardFooter className="p-6 pt-0 flex gap-2">
+                        <Button variant="outline" size="sm" className="gap-1" asChild>
+                            <LinkPreview url={project.github} _target="_blank" >
+                                <Github className="h-4 w-4" />
+                                Code
+                            </LinkPreview>
+                        </Button>
+                        {project.demo && <Button size="sm" className="gap-1" asChild>
+                            <LinkPreview url={project.demo} _target="_blank">
+                                <ExternalLink className="h-4 w-4" />
+                                Live Demo
+                            </LinkPreview>
+                        </Button>}
+                    </CardFooter>
+                </Card>
+            </BackgroundGradient>
+        </StaggerItem>
+    );
+}
 
+export default function Projects() {
     return (
         <section id="projects" className="pt-24 pb-48 bg-zinc-950">
             <Aurora
@@ -64,54 +110,12 @@ export default function Projects() {
                         Here are some of my recent projects that showcase my skills and expertise.
                     </p>
                 </ScrollReveal>
-
                 <ScrollReveal variant="stagger" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
-                        <StaggerItem key={index}>
-                            <BackgroundGradient className="rounded-[22px] p-0.5 bg-zinc-900">
-                                <Card className="rounded-[20px] border-0 bg-zinc-900 h-full">
-                                    <CardHeader className="p-0">
-                                        <div className="overflow-hidden rounded-t-[20px] relative h-48">
-                                            <Image
-                                                src={project.image || "/placeholder.png"}
-                                                alt={project.title}
-                                                fill
-                                                quality={100}
-                                                className="object-contain transition-transform hover:scale-105 duration-500"
-                                            />
-                                        </div>
-                                    </CardHeader>
-                                    <CardContent className="p-6">
-                                        <CardTitle className="text-xl mb-2 text-white">{project.title}</CardTitle>
-                                        <CardDescription className="text-zinc-400 mb-4">{project.description}</CardDescription>
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {project.tags.map((tag, i) => (
-                                                <Badge key={i} variant="secondary" className="bg-zinc-800 text-zinc-300">
-                                                    {tag}
-                                                </Badge>
-                                            ))}
-                                        </div>
-                                    </CardContent>
-                                    <CardFooter className="p-6 pt-0 flex gap-2">
-                                        <Button variant="outline" size="sm" className="gap-1" asChild>
-                                            <LinkPreview url={project.github} _target="_blank" >
-                                                <Github className="h-4 w-4" />
-                                                Code
-                                            </LinkPreview>
-                                        </Button>
-                                        {project.demo && <Button size="sm" className="gap-1" asChild>
-                                            <LinkPreview url={project.demo} _target="_blank">
-                                                <ExternalLink className="h-4 w-4" />
-                                                Live Demo
-                                            </LinkPreview>
-                                        </Button>}
-                                    </CardFooter>
-                                </Card>
-                            </BackgroundGradient>
-                        </StaggerItem>
+                        <ProjectCard key={index} project={project} />
                     ))}
                 </ScrollReveal>
-            </div >
-        </section >
-    )
+            </div>
+        </section>
+    );
 }
