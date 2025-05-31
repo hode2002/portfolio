@@ -10,8 +10,6 @@ import { FloatingNav } from "@/components/ui/floating-nav"
 import Image from "next/image";
 import { SparklesCore } from "@/components/ui/sparkles"
 import { LinkPreview } from "@/components/ui/link-preview"
-import SpotlightCard from "@/blocks/Components/SpotlightCard/SpotlightCard"
-import { BackgroundGradient } from "@/components/ui/background-gradient"
 
 const navItems = [
     {
@@ -56,7 +54,7 @@ export default function Hero() {
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <TextReveal text="Hồ Văn Dễ" className="text-4xl md:text-6xl font-bold tracking-tighter" />
                     <TextReveal
-                        text="Web Developer"
+                        text="Fullstack Web Developer"
                         className="text-xl md:text-2xl font-medium"
                         delay={0.5}
                     />

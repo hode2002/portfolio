@@ -9,7 +9,7 @@ import BlurText from "@/blocks/TextAnimations/BlurText/BlurText"
 import TrueFocus from "@/blocks/TextAnimations/TrueFocus/TrueFocus"
 
 export default function About() {
-    const aboutText = `I want to start as a Backend Developer Intern, learning to build and improve systems. I also want to explore Cloud Computing and DevOps to understand how to deploy and manage applications. In the next 3-5 years, my goal is to become a Fullstack Developer, skilled in both backend and frontend, to build modern and efficient web applications.`
+    const aboutText = `I want to be a Fullstack Intern who works hard, learns quickly, and is ready to try new technologies like Next.js, NestJS, and Docker. I hope to join real projects to get more experience, solve problems better, and learn from skilled developers.`
 
     return (
         <section id="about" className="py-24 bg-zinc-950">
