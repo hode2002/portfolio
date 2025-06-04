@@ -17,7 +17,7 @@ const projects = [
         description: "A retail website for electronic devices, supporting search, reviews, ordering, and online payment.",
         image: "/images/smart-tech-store.png",
         tags: ["Typescript", "Nextjs", "Shadcn", "Tailwind CSS", "Redux", "Nestjs", "MySQL", "MongoDB", "Redis"],
-        github: "https://github.com/hode2002/smart-tech-store",
+        github: "https://github.com/hode2002/smart-tech-frontend",
         demo: "https://store.hovande.id.vn",
     },
     {
@@ -25,7 +25,7 @@ const projects = [
         description: "A YouTube clone website with features for uploading videos, watching videos, creating playlists, commenting, and liking videos.",
         image: "/images/youtube.webp",
         tags: ["Typescript", "Nextjs", "ReactPlayer", "Tailwind CSS", "Zustand", "Nestjs", "MongoDB", "Redis"],
-        github: "https://github.com/hode2002/youtube-clone",
+        github: "https://github.com/hode2002/youtube-clone-frontend",
         demo: "https://youtu.be/lf3AO2-CQnQ",
     },
     {
