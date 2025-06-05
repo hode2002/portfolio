@@ -26,7 +26,7 @@ const projects = [
         image: "/images/youtube.webp",
         tags: ["Typescript", "Nextjs", "ReactPlayer", "Tailwind CSS", "Zustand", "Nestjs", "MongoDB", "Redis"],
         github: "https://github.com/hode2002/youtube-clone",
-        demo: "https://youtu.be/lf3AO2-CQnQ",
+        demo: "https://youtube.hovande.id.vn",
     },
     {
         title: "Image Enhancer",
@@ -34,7 +34,7 @@ const projects = [
             "A powerful image enhancement app that allows users to enhance, transform, and optimize their images with AI-powered features.",
         image: "/images/image-enhancer.png",
         tags: ["Typescript", "Nextjs", "Clerk", "Shadcn", "Tailwind CSS", "Nestjs", "Prisma", "PostgreSQL", "HuggingFace", "supabase", "Cloudinary"],
-        github: "https://github.com/hode2002/image-enhancer-frontend",
+        github: "https://github.com/hode2002/image-enhancer",
         demo: "https://image.hovande.id.vn",
     },
 ]
